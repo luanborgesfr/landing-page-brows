@@ -52,16 +52,28 @@ header div.content-header{
         display: flex;
         flex-direction: row;
         align-items: center;
-        width: 140px;
+        width: 170px;
         height: 45px;
         background-color: var(--tertiary-color);
         border: 1.8px solid var(--tertiary-color);
         border-radius: 7px;
+        box-shadow: 1.5px 3px 0px 1.5px var(--primary-color);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
         
+    }
+
+    .purchase-buttom:hover{
+        transform: translateY(-7px);
     }
 
     .purchase-buttom a{
         margin: 0 auto;
         color: white;
+        font-family: 'Manrope';
+        text-decoration: none;
+    }
+
+    .purchase-buttom a span{
+        padding: 0 10px;
     }
 }
