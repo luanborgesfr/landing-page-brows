@@ -12,6 +12,8 @@
 
 :root{
     --primary-color: #D93619;
-
+    --secundary-color: #ffca28;
     --tertiary-color: #25150F;
+
+    --primaty-text-font: 'Manrope';
 }
