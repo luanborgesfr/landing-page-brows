@@ -17,6 +17,10 @@ header div.content-header{
     margin: 0 12px;
 }
 
+.purchase-buttom{
+    display: none;
+}
+
 .car-purchase-header{
     width: 45px;
     height: 45px;
@@ -37,4 +41,27 @@ header div.content-header{
 .car-purchase-header img{
     width: 22px;
     height: 22px;
+}
+
+@media screen and (min-width:768px) {
+    .car-purchase-header{
+        display: none;
+    }
+
+    .purchase-buttom{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 140px;
+        height: 45px;
+        background-color: var(--tertiary-color);
+        border: 1.8px solid var(--tertiary-color);
+        border-radius: 7px;
+        
+    }
+
+    .purchase-buttom a{
+        margin: 0 auto;
+        color: white;
+    }
 }
