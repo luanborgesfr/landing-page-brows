@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #fff8e7;
+}
+
+header div.content-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 12px;
+}
+
+.nav-itens {
+  display: none;
+}
+
+.purchase-buttom {
+  display: none;
+}
+
+.car-purchase-header {
+  width: 45px;
+  height: 45px;
+  background-color: var(--primary-color);
+  align-items: center;
+  display: flex;
+  border: 1.8px solid var(--tertiary-color);
+  border-radius: 7px;
+  box-shadow: 2px 2px 0px 1px var(--tertiary-color);
+}
+
+.car-purchase-header a.link-car {
+  margin: 0 auto;
+  width: 22px;
+  height: 22px;
+}
+
+.car-purchase-header img {
+  width: 22px;
+  height: 22px;
+}
+
+@media screen and (min-width: 768px) {
+  .car-purchase-header {
+    display: none;
+  }
+
+  .purchase-buttom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 166px;
+    height: 54px;
+    background-color: var(--tertiary-color);
+    border: 1.8px solid var(--tertiary-color);
+    border-radius: 7px;
+    box-shadow: 4px 4px 0px 1.5px var(--primary-color);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .purchase-buttom:hover {
+    transform: translateY(-7px);
+  }
+
+  .purchase-buttom a {
+    margin: 0 auto;
+    color: white;
+    font-family: "Manrope";
+    text-decoration: none;
+  }
+
+  .purchase-buttom a span {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+    .nav-itens {
+    display: flex;
+    width: 450px;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--primaty-text-font);
+    font-weight: 800;
+  }
+
+  .content-nav-itens ul {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    list-style: none;
+  }
+
+  .content-nav-itens ul li a {
+    position: relative;
+    text-decoration: none;
+    color: var(--tertiary-color);
+  }
+
+  .content-nav-itens ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+  }
+
+  .content-nav-itens ul li a:hover::after,
+  .content-nav-itens ul li a:focus-visible::after {
+    transform: scaleX(1);
+  }
+}
