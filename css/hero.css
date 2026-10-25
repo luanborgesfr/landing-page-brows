@@ -1,0 +1,46 @@
+.hero {
+  width: 100%;
+  display: flex;
+  background-color: var(--secundary-color);
+}
+
+.content-hero {
+  margin: 0 20px;
+}
+
+.content-text span {
+  font-size: 18px;
+  line-height: 34px;
+  color: var(--primary-color);
+}
+
+.content-text p {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 40px;
+  width: 290px;
+  height: 37px;
+  background-color: #ffdc73;
+  font-family: var(--primaty-text-font);
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  font-size: 13px;
+  color: var(--tertiary-color);
+  line-height: 37px;
+  border: 1px solid var(--tertiary-color);
+  border-radius: 999px;
+}
+
+.content-hero h1 {
+  font-size: 50px;
+  font-family: "Archivo";
+  letter-spacing: -3px;
+  color: var(--tertiary-color);
+  line-height: 47px;
+}
+
+.content-hero h1 span {
+  color: var(--primary-color);
+  text-shadow: 3.5px 2.5px 0px black;
+}
