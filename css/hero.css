@@ -61,7 +61,7 @@ header.content-text span {
   font-family: var(--primaty-text-font);
   font-weight: 200;
   font-size: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .content-hero footer a {
@@ -69,6 +69,9 @@ header.content-text span {
   width: 100%;
   max-width: 369px;
   height: 54px;
+  border-radius: 10px;
+  border: 2px solid var(--tertiary-color);
+  margin-bottom: 40px;
 }
 
 .content-hero footer a.whatsapp {
@@ -79,14 +82,11 @@ header.content-text span {
   justify-content: center;
   font-family: var(--primaty-text-font);
   text-decoration: none;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 800;
-  border: 1px solid var(--tertiary-color);
-  border-radius: 18px;
   box-shadow: 6px 6px 0px -1px var(--tertiary-color);
   color: white;
   letter-spacing: 1.2px;
-  margin-bottom: 20px;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -103,15 +103,12 @@ header.content-text span {
 .content-hero footer a.menu{
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--tertiary-color);
-  border-radius: 18px;
   font-family: var(--primaty-text-font);
   text-decoration: none;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 800;
   letter-spacing: 1.2px;
   color: var(--tertiary-color);
-  margin-bottom: 20px;
   transition:
   transform 0.3s ease,
   box-shadow 0.3s ease;
@@ -126,9 +123,9 @@ header.content-text span {
   display: flex;
   justify-content: space-between;
   font-family: var(--primaty-text-font);
-  font-weight: 500;
+  font-weight: 400;
   font-size: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .content-hero footer .afirmations-quality p span{
@@ -154,4 +151,27 @@ header.content-text span {
     /* 2. Cria o preenchimento vermelho escuro da sombra (um pouco menos deslocado) */
     drop-shadow(4px 4px 0px var(--tertiary-color)); 
   margin-bottom: 30px;
+}
+
+@media screen and (min-width:768px){
+  .content-hero footer .button{
+    display: flex;
+    gap: 15px;
+  }
+
+  .content-hero footer a.whatsapp{
+    width: 290px;
+    height: 54px;
+  }
+
+  .content-hero footer a.menu{
+    width: 152px;
+    height: 54px;
+  }
+
+  .img-hero{
+    width: 537px;
+    height: 736px;
+    background-position: -156px;
+  }
 }
