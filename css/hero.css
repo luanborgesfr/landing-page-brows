@@ -175,3 +175,34 @@ header.content-text span {
     background-position: -156px;
   }
 }
+
+@media screen and (min-width:1024px) {
+  .hero{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .content-hero{
+    margin-top: 50px;
+    width: 50%;
+  }
+
+  .content-hero h1{
+    font-size: 76px;
+    line-height: 69px;
+  }
+
+  .content-hero footer a.whatsapp{
+    font-size: 12px;
+  }
+
+  .content-img{
+    width: 50%;
+  }
+
+  .img-hero{
+    margin-top: 100px;
+    width: 455px;
+    height: 562px;
+  }
+}
