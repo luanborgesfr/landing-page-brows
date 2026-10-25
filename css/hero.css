@@ -150,10 +150,56 @@ header.content-text span {
     drop-shadow(10px 10px 0px var(--primary-color)) 
     /* 2. Cria o preenchimento vermelho escuro da sombra (um pouco menos deslocado) */
     drop-shadow(4px 4px 0px var(--tertiary-color)); 
-  margin-bottom: 30px;
+  margin-bottom: 90px;
 }
 
-@media screen and (min-width:768px){
+.ticker-container{
+  width: 100%;
+  height: 57px;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0;
+  box-sizing: border-box;
+  border: 2px solid var(--tertiary-color);
+}
+
+.ticker-rotate{
+  display: flex;
+  width: max-content;
+  font-size: 17px;
+  animation: rotateWords 18s linear infinite;
+}
+
+.ticker-rotate p{
+  font-family: 'Archivo';
+  color: white;
+}
+
+.ticker-rotate span{
+  margin: 0 15px;
+  color: var(--secundary-color);
+}
+
+.ticker-rotate p{
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.ticker-rotate p[aria-hidden='true']{
+  display: block;
+}
+
+@keyframes rotateWords{
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (min-width:642px){
   .content-hero footer .button{
     display: flex;
     gap: 15px;
@@ -178,13 +224,18 @@ header.content-text span {
 
 @media screen and (min-width:1024px) {
   .hero{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
   }
+
   .content-hero{
     margin-top: 50px;
-    width: 50%;
+    margin-right: 0;
+    margin-left: 0;
+    width: auto;
   }
 
   .content-hero h1{
@@ -197,12 +248,27 @@ header.content-text span {
   }
 
   .content-img{
-    width: 50%;
+    width: auto;
   }
 
   .img-hero{
     margin-top: 100px;
-    width: 455px;
+    width: min(455px, 100%);
     height: 562px;
   }
+
+  .ticker-rotate p{
+    margin-left: 10px;
+    justify-content: center;
+  }
+
+  .ticker-rotate p[aria-hidden='true']{
+    display: none;
+  }
+
+  @keyframes rotateWords{
+  to {
+    transform: translateX(0%);
+  }
+}
 }
