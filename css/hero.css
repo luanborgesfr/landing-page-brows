@@ -1,6 +1,7 @@
 .hero {
   width: 100%;
   display: flex;
+  flex-direction: column;
   background-color: var(--secundary-color);
 }
 
@@ -86,6 +87,13 @@ header.content-text span {
   color: white;
   letter-spacing: 1.2px;
   margin-bottom: 20px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.content-hero footer a.whatsapp:hover{
+  transform: translateY(-7px);
 }
 
 .content-hero footer a.whatsapp img{
@@ -104,10 +112,17 @@ header.content-text span {
   letter-spacing: 1.2px;
   color: var(--tertiary-color);
   margin-bottom: 20px;
+  transition:
+  transform 0.3s ease,
+  box-shadow 0.3s ease;
+}
+
+.content-hero footer a.menu:hover{
+  transform: translateY(-7px);
 }
 
 .content-hero footer .afirmations-quality{
-  width: 100%;
+  width: 352px;
   display: flex;
   justify-content: space-between;
   font-family: var(--primaty-text-font);
@@ -118,4 +133,25 @@ header.content-text span {
 
 .content-hero footer .afirmations-quality p span{
   margin-right: 5px;
+}
+
+.img-hero{
+  margin: 0 auto;
+  width: 355px;
+  height: 438px;
+  background-color: red;
+  border-radius: 999px 999px 109px 100px;
+  border: 4px solid var(--tertiary-color);
+  background-image: url(../img/photo-hero-product.png);
+  background-size: cover;
+  background-position: -63px;
+  background-repeat: no-repeat;
+  transform: rotate(4deg);
+  /*box-shadow:12px 12px 0px var(--primary-color);*/
+  filter: 
+    /* 1. Cria a borda preta externa da sombra (deslocada para baixo e direita) */
+    drop-shadow(10px 10px 0px var(--primary-color)) 
+    /* 2. Cria o preenchimento vermelho escuro da sombra (um pouco menos deslocado) */
+    drop-shadow(4px 4px 0px var(--tertiary-color)); 
+  margin-bottom: 30px;
 }
