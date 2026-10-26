@@ -256,4 +256,17 @@ header.content-text span {
     height: 562px;
   }
 
+  @keyframes rotateWords{
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.ticker-container{
+  justify-content: center;
+}
+
+.ticker-container .ticker-group p[aria-hidden="true"]{
+  display: none;
+}
 }
