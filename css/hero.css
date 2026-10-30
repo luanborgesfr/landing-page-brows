@@ -71,7 +71,7 @@ header.content-text span {
   height: 54px;
   border-radius: 10px;
   border: 2px solid var(--tertiary-color);
-  margin-bottom: 40px;
+  margin-bottom: 15px;
 }
 
 .content-hero footer a.whatsapp {
