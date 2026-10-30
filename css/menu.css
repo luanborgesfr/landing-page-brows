@@ -68,6 +68,30 @@
     height: 319px;
 }
 
+.menu-itens .menu-photo-item.churros{
+    background-image: url(../img/img-churros-menu.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.menu-itens .menu-photo-item.cento{
+    background-image: url(../img/img-centoCoxinha-menu.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.menu-itens .menu-photo-item.mata-vontade{
+    background-image: url(../img/img-coxinhaChurros-menu.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.menu-itens.cento footer{
+    margin-top: 25px;
+}
+
 .menu-description-content{
     padding: 24px;
     font-family: 'Manrope';
