@@ -9,11 +9,12 @@
 }
 
 .menu-container-start{
-    margin-bottom: 150px;
+    margin-bottom: 50px;
 }
 
 .menu-container-start header{
     background-color: transparent;
+    height: auto;
 }
 
 .menu-container-start .menu-p-header{
@@ -48,6 +49,7 @@
     height: 530px;
     border: 2px solid var(--tertiary-color);
     border-radius: 20px;
+    box-shadow: 6px 6px #2115101f;
     transition:
         transform 0.3s ease,
         box-shadow 0.3s ease;
@@ -61,7 +63,7 @@
 .menu-itens .menu-photo-item{
     background-image: url(../img/photo-hero-product.png);
     background-size: cover;
-    background-position: -74px;
+    background-position: center;
     background-repeat: no-repeat;
     border-radius: 20px 20px 0 0;
     width: 100%;
@@ -141,4 +143,33 @@
 
 .menu-description-content footer a img:hover{
     transform: rotateZ(-30deg);
+}
+
+@media screen and (min-width:768px) {
+    .menu-container-start header{
+        display: grid;
+        grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+        align-items: end;
+        column-gap: 32px;
+    }
+
+    .menu-container-start .menu-p-header{
+        grid-column: 1 / -1;
+    }
+
+    .menu-container-start h2{
+        max-width: 530px;
+        margin-bottom: 0;
+    }
+
+    .menu-container-start .menu-h-content{
+        max-width: 260px;
+        justify-self: end;
+    }
+
+    .menu-container-img{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 30px;
+    }
 }
