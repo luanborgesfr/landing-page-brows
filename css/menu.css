@@ -1,6 +1,11 @@
 .card-menu{
     width: auto;
     margin: 0 20px;
+    display: grid;
+    grid-template-areas:
+        "intro"
+        "products";
+    gap: 30px;
 }
 
 .menu-itens img{
@@ -9,7 +14,14 @@
 }
 
 .menu-container-start{
-    margin-bottom: 50px;
+    grid-area: intro;
+}
+
+.menu-container-img{
+    grid-area: products;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    gap: 30px;
 }
 
 .menu-container-start header{
@@ -45,8 +57,9 @@
 }
 
 .menu-itens {
-    margin-bottom: 20px;
-    height: 530px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
     border: 2px solid var(--tertiary-color);
     border-radius: 20px;
     box-shadow: 6px 6px #2115101f;
@@ -90,13 +103,12 @@
     background-repeat: no-repeat;
 }
 
-.menu-itens.cento footer{
-    margin-top: 25px;
-}
-
 .menu-description-content{
     padding: 24px;
     font-family: 'Manrope';
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .menu-description-content h3{
@@ -110,7 +122,8 @@
 }
 
 .menu-description-content footer{
-    margin-top: 40px;
+    margin-top: auto;
+    padding-top: 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -163,13 +176,13 @@
     }
 
     .menu-container-start .menu-h-content{
-        max-width: 260px;
         justify-self: end;
     }
 
+}
+
+@media screen and (min-width:1024px) {
     .menu-container-img{
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 30px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 }
