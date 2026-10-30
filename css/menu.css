@@ -1,0 +1,188 @@
+.card-menu{
+    width: auto;
+    margin: 0 20px;
+    display: grid;
+    grid-template-areas:
+        "intro"
+        "products";
+    gap: 30px;
+}
+
+.menu-itens img{
+    margin-top: 200px;
+    width: 200px;
+}
+
+.menu-container-start{
+    grid-area: intro;
+}
+
+.menu-container-img{
+    grid-area: products;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    gap: 30px;
+}
+
+.menu-container-start header{
+    background-color: transparent;
+    height: auto;
+}
+
+.menu-container-start .menu-p-header{
+    margin: 72px 0 25px;
+    font-family: 'Manrope';
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.menu-container-start h2{
+    font-size: 46px;
+    font-family: 'Archivo';
+    line-height: 42px;
+    letter-spacing: -1.5px;
+    margin-bottom: 35px;
+}
+
+.menu-container-start h2 span{
+    color: var(--primary-color);
+}
+
+.menu-container-start .menu-h-content p{
+    font-family: 'Manrope';
+    font-weight: 400;
+    color: #4f463f;
+    font-size: 15px;
+}
+
+.menu-itens {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    border: 2px solid var(--tertiary-color);
+    border-radius: 20px;
+    box-shadow: 6px 6px #2115101f;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.menu-itens:hover{
+    transform: translateY(-5px) rotateZ(-1deg);
+    box-shadow: 10px 10px 0px var(--secundary-color);
+}
+
+.menu-itens .menu-photo-item{
+    background-image: url(../img/photo-hero-product.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: 319px;
+}
+
+.menu-itens .menu-photo-item.churros{
+    background-image: url(../img/img-churros-menu.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.menu-itens .menu-photo-item.cento{
+    background-image: url(../img/img-centoCoxinha-menu.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.menu-itens .menu-photo-item.mata-vontade{
+    background-image: url(../img/img-coxinhaChurros-menu.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.menu-description-content{
+    padding: 24px;
+    font-family: 'Manrope';
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.menu-description-content h3{
+    font-weight: 900;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.menu-description-content p{
+    color: #4f463f;
+}
+
+.menu-description-content footer{
+    margin-top: auto;
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-description-content footer p {
+    font-weight: 900;
+    font-size: 20px;
+    color: var(--tertiary-color);
+}
+
+.menu-description-content footer a{
+    height: 38px;
+    width: 38px;
+    background-color: var(--primary-color);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.menu-description-content footer a img{
+    text-decoration: none;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.menu-description-content footer a img:hover{
+    transform: rotateZ(-30deg);
+}
+
+@media screen and (min-width:768px) {
+    .menu-container-start header{
+        display: grid;
+        grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+        align-items: end;
+        column-gap: 32px;
+    }
+
+    .menu-container-start .menu-p-header{
+        grid-column: 1 / -1;
+    }
+
+    .menu-container-start h2{
+        max-width: 530px;
+        margin-bottom: 0;
+    }
+
+    .menu-container-start .menu-h-content{
+        justify-self: end;
+    }
+
+}
+
+@media screen and (min-width:1024px) {
+    .menu-container-img{
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
