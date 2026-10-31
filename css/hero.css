@@ -42,11 +42,11 @@ header.content-text span {
 }
 
 .content-hero h1 {
-  font-size: 50px;
+  font-size: 60px;
   font-family: "Archivo";
   letter-spacing: -3px;
   color: var(--tertiary-color);
-  line-height: 47px;
+  line-height: 60px;
   margin: 20px 0 20px 0;
 }
 
@@ -60,18 +60,22 @@ header.content-text span {
 .content-hero main p {
   font-family: var(--primaty-text-font);
   font-weight: 200;
-  font-size: 20px;
+  font-size: 23px;
   margin-bottom: 30px;
 }
 
 .content-hero footer a {
   display: flex;
   width: 100%;
-  max-width: 369px;
+  max-width: none;
   height: 54px;
   border-radius: 10px;
   border: 2px solid var(--tertiary-color);
   margin-bottom: 15px;
+}
+
+.content-hero footer .button {
+  width: 100%;
 }
 
 .content-hero footer a.whatsapp {
@@ -199,18 +203,25 @@ header.content-text span {
 }
 
 @media screen and (min-width:642px){
+  .content-hero h1 {
+    font-size: 67px;
+  }
   .content-hero footer .button{
     display: flex;
     gap: 15px;
   }
 
   .content-hero footer a.whatsapp{
+    flex: 0 0 290px;
     width: 290px;
     height: 54px;
   }
 
   .content-hero footer a.menu{
-    width: 152px;
+    flex: 1;
+    width: auto;
+    max-width: 152px;
+    min-width: 0;
     height: 54px;
   }
 

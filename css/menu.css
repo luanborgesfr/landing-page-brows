@@ -158,6 +158,23 @@
     transform: rotateZ(-30deg);
 }
 
+.card-menu .menu-vejaMais {
+    display: flex;
+    justify-content: center;
+}
+
+.card-menu .menu-vejaMais a{
+  margin-bottom: 60px;
+  font-family: 'Manrope';
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 2px;
+  color: var(--tertiary-color);
+}
+
 @media screen and (min-width:768px) {
     .menu-container-start header{
         display: grid;
