@@ -1,0 +1,117 @@
+.about{
+    background-color: var(--tertiary-color);
+    width: auto;
+    padding: 80px 20px;
+}
+
+
+.about-content-grid {
+display: grid;
+grid-template-columns: 345px;
+grid-template-rows: 1fr repeat(3, 320px);
+grid-column-gap: 0px;
+grid-row-gap: 20px;
+}
+
+.about-text-init { grid-area: 1 / 1 / 2 / 2;}
+.about-massa {grid-area: 2 / 1 / 3 / 2;}
+.about-recheio { grid-area: 3 / 1 / 4 / 2; }
+.about-entrega { grid-area: 4 / 1 / 5 / 2; } 
+
+.about-text-init p{
+    color: var(--secundary-color);
+    font-family: 'Manrope';
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.about-text-init h4{
+    font-family: 'Archivo';
+    color: white;
+    font-size: 37px;
+    letter-spacing: -1px;
+}
+
+.about-massa,
+.about-recheio, 
+.about-entrega{
+    background-color: #ffffff0a;
+    padding: 32px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.about-massa svg,
+.about-recheio svg,
+.about-entrega svg{
+    margin: 0;
+    color: var(--secundary-color);
+}
+
+.about-icon-border {
+    box-sizing: border-box;
+    display: flex;
+    width: 64px;
+    height: 64px;
+    border: 2px solid var(--secundary-color);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 64px;
+}
+
+.about-massa .about-content-icon,
+.about-recheio .about-content-icon,
+.about-entrega .about-content-icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.about-massa p,
+.about-recheio p,
+.about-entrega p{
+    font-family: 'Archivo';
+    font-size: 54px;
+    color: #ffffff2e;
+}
+
+.about-massa footer h4{
+    font-family: 'Manrope';
+    font-weight: 800;
+    text-align: center;
+    color: white;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.about-recheio footer h4{
+    font-family: 'Manrope';
+    font-weight: 800;
+    text-align: left;
+    color: white;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.about-entrega footer h4{
+    font-family: 'Manrope';
+    font-weight: 800;
+    text-align: left;
+    color: white;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.about-massa footer p,
+.about-recheio footer p,
+.about-entrega footer p{
+    font-family: 'Manrope';
+    text-align: left;
+    color: #fff8e799;
+    font-size: 15px;
+}
