@@ -50,6 +50,16 @@
     border-radius: 10px;
 }
 
+.testimonial{
+    box-shadow: 7px 7px 0px var(--tertiary-color);
+    border: 1px solid var(--tertiary-color);
+    margin-bottom: 20px;
+}
+
+.testimonial.fabricio{
+    transform: rotate(1.5deg);
+}
+
 .testimonial .testimonial-content-star{
     display: flex;
     justify-content: space-between;
@@ -112,4 +122,11 @@
     color: var(--tertiary-color);
     font-family: 'Manrope';
     font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+    .testimonials-content-grid{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
 }
