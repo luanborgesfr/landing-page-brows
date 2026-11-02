@@ -7,8 +7,8 @@
 
 .about-content-grid {
 display: grid;
-grid-template-columns: 345px;
-grid-template-rows: 1fr repeat(3, 320px);
+grid-template-columns: auto;
+grid-template-rows: 1fr repeat(3, auto);
 grid-column-gap: 0px;
 grid-row-gap: 20px;
 }
@@ -28,10 +28,12 @@ grid-row-gap: 20px;
 }
 
 .about-text-init h4{
-    font-family: 'Archivo';
-    color: white;
-    font-size: 37px;
-    letter-spacing: -1px;
+  font-family: 'Archivo';
+  color: white;
+  font-size: 70px;
+  letter-spacing: -3px;
+  margin-bottom: 50px;
+  line-height: 85px;
 }
 
 .about-massa,
@@ -41,6 +43,11 @@ grid-row-gap: 20px;
     padding: 32px;
     border-radius: 15px;
     margin-bottom: 20px;
+}
+
+.about-recheio{
+    background-color: #b93619;
+    transform: translateY(-1.5rem);
 }
 
 .about-massa svg,
@@ -83,7 +90,7 @@ grid-row-gap: 20px;
 .about-massa footer h4{
     font-family: 'Manrope';
     font-weight: 800;
-    text-align: center;
+    text-align: left;
     color: white;
     font-size: 21px;
     margin-bottom: 15px;
@@ -114,4 +121,38 @@ grid-row-gap: 20px;
     text-align: left;
     color: #fff8e799;
     font-size: 15px;
+}
+
+@media (min-width: 768px) {
+    .about-content-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: auto auto;
+        gap: 20px;
+
+        grid-template-areas:
+            "intro intro intro"
+            "massa recheio entrega";
+    }
+
+    .about-text-init {
+        grid-area: intro;
+    }
+
+    .about-massa {
+        grid-area: massa;
+    }
+
+    .about-recheio {
+        grid-area: recheio;
+    }
+
+    .about-entrega {
+        grid-area: entrega;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .about{
+        padding: 80px 130px;
+    }
 }
