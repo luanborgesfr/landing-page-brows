@@ -1,0 +1,157 @@
+.testimonials {
+  padding: 80px 20px;
+  background-color: #f4ead3;
+}
+
+.testimonials-header {
+  background-color: transparent;
+}
+
+.testimonials-header p {
+  font-family: "Manrope";
+  font-weight: 800;
+  letter-spacing: 0.15rem;
+  font-size: 12px;
+  color: var(--tertiary-color);
+}
+
+.testimonials-header h5 {
+  font-family: "Archivo";
+  font-weight: 900;
+  letter-spacing: -1px;
+  font-size: 52px;
+  color: var(--tertiary-color);
+}
+
+.testimonials-header h5 span {
+  color: var(--primary-color);
+}
+
+.testimonials-container .testimonials-star-text .testimonials-star {
+  margin-top: 30px;
+  font-size: 28px;
+  color: var(--secundary-color);
+  margin-bottom: 20px;
+}
+
+.testimonials-container .testimonials-star-text p {
+  font-family: "Manrope";
+  font-weight: 300;
+  font-size: 18px;
+  color: var(--quaternary-color);
+}
+
+.testimonials-content-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(300px, 1fr));
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.testimonials-content-grid article {
+  background-color: var(--quinary-color);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.testimonial {
+  box-shadow: 7px 7px 0px var(--tertiary-color);
+  border: 1px solid var(--tertiary-color);
+  margin-bottom: 20px;
+}
+
+.testimonial.fabricio {
+  transform: rotate(1.5deg);
+}
+
+.testimonial .testimonial-content-star {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.testimonial-content-star span {
+  font-size: 72px;
+  color: var(--secundary-color);
+}
+
+.testimonial h5 {
+  font-family: "Archivo";
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 15px;
+  color: var(--secundary-color);
+  margin-bottom: 20px;
+}
+
+.testimonial p {
+  font-family: "Manrope";
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.testimonial hr {
+  border: 1px solid #4f463f2f;
+  margin-bottom: 20px;
+}
+
+.testimonial .testimonial-container-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.testimonial-container-profile p {
+  margin: 0 10px;
+  font-family: "Manrope";
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.testimonial-container-profile img {
+  width: 44px;
+  height: 44px;
+}
+
+.mauro-avatar {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: var(--secundary-color);
+  color: var(--tertiary-color);
+  font-family: "Manrope";
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonials-content-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .testimonials-header h5 {
+    font-size: 66px;
+    width: max-content;
+    white-space: nowrap;
+  }
+
+  .testimonials-container-header {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+    column-gap: 48px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .testimonials {
+    padding: 80px 130px;
+  }
+}
