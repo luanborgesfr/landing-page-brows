@@ -24,7 +24,8 @@
     margin-bottom: 30px;
 }
 
-.footer-button, span{
+.footer-button, 
+.footer-button span{
     display: flex;
 }
 
@@ -44,15 +45,23 @@
     box-shadow: 5px 5px #ffffff2e;
     margin-bottom: 60px;
     font-size: 14px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.footer-button a:hover{
+  transform: translateY(-7px);    
 }
 
 .footer-button a span{
     margin-left: 10px;
 }
 
-.footer-content-header hr{
-    border: 0.1px solid white;
-    background-color: white;
+.footer hr{
+    margin: 0 12px 40px;
+    border: 0.1px solid rgb(192, 131, 131);;
+    background-color: rgb(192, 131, 131);;
     margin-bottom: 40px;
 }
 
@@ -77,7 +86,9 @@
 .footer-content-logo p,
 .footer-content-address p,
 .footer-content-operation p,
-.footer-content-social p{
+.footer-content-social p,
+.content-copy p,
+.content-creator p{
     font-family: 'Manrope';
     font-weight: 400;
     font-size: 14px;
@@ -133,4 +144,121 @@
     border: 0.5px solid white;
     color: white;
     border-radius: 100%;
+    margin-bottom: 40px;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.footer-content-social a:hover{
+    background-color: var(--secundary-color);
+    color: var(--tertiary-color);
+}
+
+footer .footer-hr{
+    margin-top: 40px;
+}
+
+.footer-content-copy-grid{
+    padding: 0 12px 80px;
+    display: grid;
+    grid-template-areas:
+        "copy"
+        "creator"
+    ;
+}
+
+.content-copy{
+    grid-area: copy;
+}
+
+.content-creator{
+    grid-area: creator;
+}
+
+.content-copy p{
+    margin-bottom: 10px;
+}
+
+.content-creator p a{
+    color: #ffffff71;
+    text-decoration: none;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+@media screen and (min-width:768px) {
+    .footer-content-header{
+        display: grid;
+        grid-template-areas:
+            "header button"
+        ;
+        align-items: center;
+    }
+
+    .footer-header{
+        grid-area: header;
+    }
+
+    .footer-button{
+        grid-area: button;
+        justify-self: end;
+    }
+
+    .footer-content-header hr{
+        width: 100%;
+    }
+
+    .footer-header h6{
+        margin-bottom: 90px;
+    }
+    
+    .footer-content-grid{
+        display: grid;
+        gap: 50px;
+        grid-template-areas: 
+        "logo address operation social"
+        ;
+    }
+
+    .footer-content-logo{
+        grid-area: logo;
+    }
+
+    .footer-content-address{
+        grid-area: address;
+    }
+
+    .footer-content-operation{
+        grid-area: operation;
+    }
+
+    .footer-content-social{
+        grid-area: social;
+    }
+
+    .footer-content-copy-grid{
+        display: grid;
+        grid-template-areas:
+            "copy creator"
+        ;
+        justify-content: space-between;
+    }
+
+    .content-copy{
+        grid-area: copy;
+    }
+
+    .content-creator{
+        grid-area: creator;
+    }
+    .content-creator p{
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .footer{
+    padding: 80px 130px 0;
+}
 }
