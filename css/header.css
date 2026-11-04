@@ -115,7 +115,8 @@ header div.content-header {
   }
 
   .content-nav-itens ul li a:hover::after,
-  .content-nav-itens ul li a:focus-visible::after {
+  .content-nav-itens ul li a:focus-visible::after,
+  .content-nav-itens ul li a.is-active::after {
     transform: scaleX(1);
   }
 }
